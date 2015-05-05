@@ -1,0 +1,99 @@
+body{
+	font-family: Avenir Next, Avenir, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	margin: 0 15px 0 15px;
+	letter-spacing: -0.02em;
+}
+
+p{
+	margin: 0px;
+}
+sub{
+	font-size: 67%;
+	vertical-align: -10%;
+}
+sup{
+	font-size: 67%;
+	vertical-align: 33%;
+}
+.s1{
+	-webkit-hyphens: none;
+	color: #000000;
+	font-size: 187.5000%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0.0000%;
+	text-transform: none;
+}
+.s2{
+	-webkit-hyphens: none;
+	color: #81878C;
+	font-size: 68.7500%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-indent: 0.0000%;
+	text-transform: none;
+	font-size: 16px;
+	font-weight: 500;
+	 border-bottom: 1px solid #E5E5E5;
+	 padding-bottom: 20px;
+}
+.s3{
+	-webkit-hyphens: none;
+	color: #3F525B;
+
+	font-size: 68.7500%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	hyphens: none;
+	letter-spacing: 0.0000em;
+	margin-bottom: 0.0000%;
+	margin-top: 0.0000%;
+	padding-left: 0.0000%;
+	padding-right: 0.0000%;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0.0000%;
+	text-transform: none;
+	font-size: 16px;
+	padding-bottom:16px;
+	padding-top: 20px;
+}
+.s4{
+	font-weight: 600;
+}
+.c1{
+	text-decoration: underline;
+}
+
+.s2 a{
+	text-decoration: none;
+}
+
+a, a:hover, a:active, a:visited{
+	text-decoration: none;
+	color: #3FC0FE;
+}
+
+
+
+
+

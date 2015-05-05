@@ -1,0 +1,57 @@
+function redoButton() {
+  if ($("#phone-input").intlTelInput("isValidNumber")) {
+    console.log("Hello in isValidNumber true: " + $("#phone-input").intlTelInput("getNumber"));
+    $('#download').removeClass("hidden");
+    $('#download').removeClass("loading");
+  } else {
+    $('#download').addClass("hidden");
+  }
+}
+
+function attemptedToProceedInput() {
+  var number = $("#phone-input").intlTelInput("isValidNumber")
+    if ($("#phone-input").intlTelInput("isValidNumber") && !$('#download').hasClass('loading')) {
+      $('#download').addClass("loading");
+
+      var jqxhr = $.ajax("/linkreq/" + $("#phone-input").intlTelInput("getNumber"));
+      jqxhr.done(function(data) {
+        console.log("got " + data);
+        if (data.url && data.url != "") {
+          window.location.href = data.url;
+        } else {
+          alert( "Something went wrong with your phone number. Please ensure you have no typos." );
+          $('#download').removeClass("hidden");
+          $('#download').removeClass("loading");
+        }
+      })
+      .fail(function() {
+        alert( "The internet is being kind of slow. Check your network connection, then try again." );
+        $('#download').removeClass("hidden");
+        $('#download').removeClass("loading");
+      })
+    }
+}
+
+$(document).ready(function(){
+  $('#phone-input').intlTelInput({
+    utilsScript: "/static/intl-tel-input/lib/libphonenumber/build/utils.js",
+    defaultCountry: "us",
+    preferredCountries: ["us"]
+  })
+
+  redoButton();
+  $('#phone-input').on('input', function() {
+    redoButton();
+  });
+
+  $('#phone-input').keyup(function(e){
+    if(e.keyCode == 13) {
+      attemptedToProceedInput();
+    }
+  });
+
+  $('#download').click(function(){
+    attemptedToProceedInput();
+  });
+});
+
